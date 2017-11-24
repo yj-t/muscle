@@ -1,0 +1,366 @@
+body{
+  width: 100%;
+  margin: 0;
+}
+.wrapper {
+    padding-top: 15px;
+    height: 50px;
+/*    background: #FFF; */
+    margin-bottom: 1px;
+    text-align: center;
+}
+
+.wrapper a {
+    text-decoration: none;
+    color: #444;
+    font-size: 22px;
+    padding-left: 15px;
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+    background-size: 16px;
+    font-weight: bold;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ptr--ptr {
+    box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+    font-size: 0.85em;
+    font-weight: bold;
+    top: 0;
+    height: 0;
+    transition: height 0.3s, min-height 0.3s;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    align-content: stretch;
+}
+
+.ptr--box {
+    padding: 10px;
+    flex-basis: 100%;
+}
+
+.ptr--icon {
+    color: rgba(0, 0, 0, 0.3);
+    transition: transform .3s;
+}
+
+.ptr--text {
+    margin-top: .33em;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.filter-bar {
+    background: #FFF;
+}
+
+.filter-bar a.active, .filter-bar button.active {
+    color: #222;
+}
+
+.filter-bar a, .filter-bar button {
+    width: 33.3%;
+    display: block;
+    text-align: center;
+    color: #ccc;
+    float: left;
+    text-decoration: none;
+    outline: none;
+    background: transparent;
+    height: 45px;
+    border: none;
+    position: relative;
+}
+
+.filter-bar a i, .filter-bar button i {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-box:before {
+    content: "\e908";
+}
+
+.icon-square:before {
+    content: "\e907";
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.item-box {
+    position: relative;
+    margin-top: 0px;
+    background: #FFF;
+    padding-bottom: 20px;
+}
+
+user-box, [data-is="user-box"] {
+    margin-top: 0px;
+}
+
+.line-bar {
+    background: #FFF;
+    padding: 15px;
+    margin-bottom: 1px;
+    position: relative;
+/*    min-height: 60px; */
+}
+
+.line-bar>.body a {
+    font-size: 12px;
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.line-bar>.body {
+    padding-left: 40px;
+    padding-right: 100px;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.line-bar>.icon {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+}
+
+a {
+    color: #3599f0;
+}
+
+.item-box .item-box-main {
+    /*position: relative;*/
+    border-top: 1px solid #efefef;
+}
+
+
+.item-box .item-box-main>.inner {
+    width: 95vw;
+    height: 95vw;
+  /*  position: absolute;*/
+    display: block;
+    text-decoration: none;
+    margin: 0 2.5vw;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(/images/loading.gif);
+}
+
+.item-center>.tool {
+    padding: 20px 15px 10px;
+    background: #FFF;
+}
+
+.item-center>.tool button, .item-center>.tool a {
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    padding-right: 13px;
+    line-height: 26px;
+}
+
+.item-center>.tool button {
+    display: inline-block;
+    float: left;
+}
+
+.favorite-button.add {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.favorite-button {
+    border: none;
+    background: transparent;
+    opacity: 0.1;
+    cursor: auto;
+    vertical-align: middle;
+}
+
+.icon-heart-o:before {
+    content: "\e900";
+}
+
+.item-center>.tool a {
+    color: #444;
+}
+
+.icon-comment:before {
+    content: "\e909";
+}
+
+.item-center .caption, .item-center .comment {
+    background: #FFF;
+    padding: 0px 15px 10px;
+    font-size: 12px;
+    word-break: break-all;
+}
+
+.item-center .caption .user, .item-center .comment .user {
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 3px;
+}
+
+my-navi, [data-is="my-navi"] {
+    background: #232b38;
+    border-top: 1px solid #111927;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    z-index: 100;
+}
+
+my-navi>.wrapper a.active, [data-is="my-navi"]>.wrapper a.active {
+    color: #f2f6fb;
+}
+
+my-navi>.wrapper a, [data-is="my-navi"]>.wrapper a {
+    position: relative;
+    display: block;
+    color: #828a97;
+    font-size: 14px;
+    float: left;
+    width: 15%;
+    text-decoration: none;
+    text-align: center;
+/*    padding-top: 10px; */
+    height: 50px;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+    content: "\e903";
+}
+
+.icon-search:before {
+    content: "\e902";
+}
+
+.icon-plus:before {
+    content: "\e904";
+}
+
+.icon-bell:before {
+    content: "\e905";
+}
+
+my-navi>.wrapper a>.alert-counter span, [data-is="my-navi"]>.wrapper a>.alert-counter span {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    font-size: 11px;
+    color: #FFF;
+    background: #FF1C12;
+    width: 15px;
+    height: 15px;
+    line-height: 12px;
+    padding-top: 1px;
+    border-radius: 50%;
+}
+
+.active a{
+  font-size:18px;
+}
+
+.post_text {
+    font-size: 14px;
+}
+
+.user {
+    font-size: 12px;
+}
+
+
+
+
+.row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 90%;
+}
+
+div.contents.row h2 {
+    margin: 20px 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+div.contents.row .new_user {
+    font-family: "游ゴシック", "YuGothic";
+}
+
+form input, form textarea {
+    width: 95%;
+    margin: 5px 0 15px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    font-family: "游ゴシック", "YuGothic";
+}
