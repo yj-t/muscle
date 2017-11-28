@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get   'posts/new'  =>  'posts#new'       #投稿画面
   get   'users/:id'   =>  'users#show' #Mypageへのルーティング
   root 'top#index' #トップページ
+  get 'search' => 'search#index' #検索ページ
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
