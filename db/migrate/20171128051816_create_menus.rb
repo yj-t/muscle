@@ -4,7 +4,7 @@ class CreateMenus < ActiveRecord::Migration
       t.integer     :post_id
       t.integer     :user_id
       t.integer     :count
-      t.integer     :type
+      t.integer     :training_type , default: 0, null: false
       t.timestamps
     end
   end

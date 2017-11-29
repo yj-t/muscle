@@ -14,10 +14,10 @@
 ActiveRecord::Schema.define(version: 20171128051816) do
 
   create_table "menus", force: :cascade do |t|
-    t.integer  "post_id",    limit: 4
-    t.integer  "user_id",    limit: 4
-    t.integer  "count",      limit: 4
-    t.integer  "type",       limit: 4
+    t.integer  "post_id",       limit: 4
+    t.integer  "user_id",       limit: 4
+    t.integer  "count",         limit: 4
+    t.integer  "training_type", limit: 4, default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
