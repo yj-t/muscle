@@ -5,17 +5,20 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
+    @post.menus.build
   end
 
   def create
     #@post = Post.new(post_params)
-    @menu = Menu.new(menu_params)
-    @menu.save
+    @post = current_user.posts.new(menu_params)
+    # binding.pry
+    @post.save
     redirect_to posts_path
   end
 
   private
   def menu_params
-    params.permit(:count)
+    params.require(:post).permit(:title, menus_attributes: [:training_type, :count, :user_id])
   end
 end
