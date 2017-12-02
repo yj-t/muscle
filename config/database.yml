@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: muscle_production
-  username: "b4a9c524503a7b"
-  password: "<%= ENV['DATABASE_PASSWORD'] %>"
+  database: heroku_b62865d542e220f
+  username: b4a9c524503a7b
+  password: <%= ENV['DATABASE_PASSWORD'] %>
