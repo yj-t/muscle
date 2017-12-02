@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: muscle_production
-  username: muscle
+  username: b4a9c524503a7b
   password: <%= ENV['DATABASE_PASSWORD'] %>
