@@ -3,36 +3,30 @@
     <div class="container">
       <div class="item-list clearfix" data-is="item-list" url="/mypage">
         <div class="item-box-list">
+
+
+        <% @posts.each do |post| %>
           <div class="item-box" data-is="item-box">
-            <div class="line-bar user-box" data-is="user-box"> <a class="icon" style="background-image: url('assets/dumbbell-940375_1920.jpg');" href="/user/muscle"></a>
-              <div class="body"> <a href="/user/muscle">筋トレ管理サービスMuscle</a> </div>
-            </div>
-            <div class="item-box-main"> <a class="inner" style="background-image: url(assets/training-828760_1920.jpg);" href="/item/734"></a> </div>
-            <div class="item-center" data-is="item-center">
-              <div class="tool clearfix"> </div>
-              <div class="caption">
-                <div class="post_text">
-                  デッドリフト 100kg 10回 3set <br><br> デクラインプッシュアップ 自重 15回 3set <br><br> レッグプレス 80kg 10回 3set</div>
+              <div class="line-bar user-box" data-is="user-box"> <a class="icon" style="background-image: url('assets/dumbbell-940375_1920.jpg');" href="/user/muscle"></a>
+                <div class="body"> <a href="/user/muscle">筋トレ管理サービスMuscle</a> </div>
               </div>
-              <div class="my_comments"></div>
+              <div class="item-box-main"> <a class="inner" style="background-image: url(assets/training-828760_1920.jpg);" href="/item/734"></a>
+              </div>
+              <% post.menus.each do |menu| %>
+                <div class="item-center" data-is="item-center">
+                  <div class="tool clearfix">
+                  </div>
+                  <div class="caption">
+                    <div class="post_text">
+                      <%= menu.training_type %> <%= menu.count %>回 <br><br>
+                      <%= post.title %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
             </div>
           </div>
-        </div>
-        <div class="item-box" data-is="item-box">
-            <div class="line-bar user-box" data-is="user-box"> <a class="icon" style="background-image: url('assets/dumbbell-940375_1920.jpg');" href="/user/muscle"></a>
-              <div class="body"> <a href="/user/muscle">筋トレ管理サービスMuscle</a> </div>
-            </div>
-            <div class="item-box-main"> <a class="inner" style="background-image: url(assets/training-828760_1920.jpg);" href="/item/734"></a> </div>
-            <div class="item-center" data-is="item-center">
-              <div class="tool clearfix"> </div>
-              <div class="caption">
-                <div class="post_text">
-                  デッドリフト 100kg 10回 3set <br><br> デクラインプッシュアップ 自重 15回 3set <br><br> レッグプレス 80kg 10回 3set<br><br></div>
-              </div>
-              <div class="my_comments"></div>
-            </div>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
